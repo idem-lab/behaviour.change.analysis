@@ -4,10 +4,14 @@
 # behaviour.change.analysis
 
 <!-- badges: start -->
+
+![Experimental](https://img.shields.io/badge/status-experimental-orange)
 <!-- badges: end -->
 
-This package provides functions to analyse behavioural questionnaire
+This package provides[^1] functions to analyse behavioural questionnaire
 data.
+
+DO NOT USE THIS PACKAGE IT IS IN EARLY DEVELOPMENT
 
 ## Installation
 
@@ -18,3 +22,5 @@ from [GitHub](https://github.com/) with:
 # install.packages("pak")
 pak::pak("idem-lab/behaviour.change.analysis")
 ```
+
+[^1]: Well, with luck it eventually will.
