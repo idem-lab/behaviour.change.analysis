@@ -1,3 +1,28 @@
+#' @title Split ticks and labels
+#' @description
+#' Independently split frequency of plotting labels and ticks
+#'
+#'
+#' @param dat
+#' @param tick_freq
+#' @param label_freq
+#' @param label_format
+#' @param label_last
+#' @param start_date
+#' @param end_date
+#'
+#' @returns `list` of tick dates, labels, and tick colours
+#' @export
+#'
+#' @examples
+#' split_ticks_and_labels(
+#' tick_freq = "3 month",
+#' label_freq = "6 months",
+#' label_format = "%b %y"
+#' start_date = as.Date("2020-01-01"),
+#' end_date = as.Date("2022-12-31"),
+#' )
+#'
 split_ticks_and_labels <- function(
     # data can be vector of dates or dataframe/tibble with date column
   dat = NULL,
