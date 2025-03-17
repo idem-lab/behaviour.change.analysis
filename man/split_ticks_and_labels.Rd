@@ -9,12 +9,15 @@ split_ticks_and_labels(
   tick_freq = "1 month",
   label_freq = "2 months",
   label_format = "\%b \%y",
-  label_last = TRUE,
+  label_shift = TRUE,
   start_date,
   end_date
 )
 }
 \arguments{
+\item{label_shift}{\code{logical} sometimes necessary or desirable to switch which
+ticks are labelled (e.g. to align with start of a year etc.)}
+
 \item{end_date}{}
 }
 \value{

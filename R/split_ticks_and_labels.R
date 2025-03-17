@@ -1,13 +1,13 @@
 #' @title Split ticks and labels
-#' @description
-#' Independently split frequency of plotting labels and ticks
+#' @description Independently split frequency of plotting labels and ticks
 #'
 #'
 #' @param dat
 #' @param tick_freq
 #' @param label_freq
 #' @param label_format
-#' @param label_last
+#' @param label_shift `logical` sometimes necessary or desirable to switch which
+#'   ticks are labelled (e.g. to align with start of a year etc.)
 #' @param start_date
 #' @param end_date
 #'
@@ -29,7 +29,7 @@ split_ticks_and_labels <- function(
   tick_freq = "1 month",
   label_freq = "2 months",
   label_format = "%b %y",
-  label_last = TRUE,
+  label_shift = TRUE,
   start_date,
   end_date
 ){
