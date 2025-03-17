@@ -15,7 +15,7 @@ download_holiday_dates <- function(destination) {
     lapply(
       readr::read_csv,
       col_types =
-        cols(
+        readr::cols(
           Date = readr::col_date(format = "%Y%m%d"),
           `Holiday Name` = readr::col_character(),
           Information = readr::col_character(),
@@ -26,7 +26,7 @@ download_holiday_dates <- function(destination) {
     do.call(
       dplyr::bind_rows, .
     ) %>%
-    mutate(
+    dplyr::mutate(
       state = toupper(Jurisdiction),
       state = unabbreviate_states(state),
       date = Date,

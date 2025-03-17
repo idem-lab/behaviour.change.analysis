@@ -1,3 +1,17 @@
+#' @title Interventions
+#' @description
+#' Start and (optionally) end dates for governmental non-pharmaceutical intervention actions in Australia nationally and at state level from 2020—2021.
+#'
+#'
+#' @param which `character`
+#' @param end_dates
+#' @param exclude_after
+#'
+#' @returns `tbl_df`
+#' @export
+#'
+#' @examples
+#' interventions()
 interventions <- function(
     which = c(
       "all",

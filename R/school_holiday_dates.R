@@ -1,14 +1,23 @@
-# dates of school holidays by state, from:
-# 2020: https://info.australia.gov.au/about-australia/special-dates-and-events/school-term-dates
-# 2021 onwards:
-# https://www.education.act.gov.au/__data/assets/pdf_file/0007/801583/Term-Date-2019-2025.pdf
-# https://education.nsw.gov.au/public-schools/going-to-a-public-school/calendars
-# https://nt.gov.au/learning/primary-and-secondary-students/school-term-dates-in-nt
-# https://education.qld.gov.au/about-us/calendar/term-dates
-# https://www.education.sa.gov.au/teaching/south-australian-state-schools-term-dates
-# https://www.education.tas.gov.au/about-us/term-dates/term-dates-2021/
-# https://www.education.vic.gov.au/about/department/Pages/datesterm.aspx
-# https://www.education.wa.edu.au/future-term-dates/
+#' @title Australian School Holiday Dates 2020—2022
+#'
+#' @returns `tbl_df`
+#' @export
+#'
+#' @details
+#' dates of school holidays by state, from:
+#' 2020: <https://info.australia.gov.au/about-australia/special-dates-and-events/school-term-dates>
+#' 2021 onwards:
+#' <https://www.education.act.gov.au/__data/assets/pdf_file/0007/801583/Term-Date-2019-2025.pdf>
+#' <https://education.nsw.gov.au/public-schools/going-to-a-public-school/calendars>
+#' <https://nt.gov.au/learning/primary-and-secondary-students/school-term-dates-in-nt>
+#' <https://education.qld.gov.au/about-us/calendar/term-dates>
+#' <https://www.education.sa.gov.au/teaching/south-australian-state-schools-term-dates>
+#' <https://www.education.tas.gov.au/about-us/term-dates/term-dates-2021/>
+#' <https://www.education.wa.edu.au/future-term-dates/#' >
+#' <https://www.education.vic.gov.au/about/department/Pages/datesterm.aspx>
+#'
+#' @examples
+#' school_holiday_dates()
 school_holiday_dates <- function() {
   dplyr::bind_rows(
     tibble::tribble(~school_holiday, ~start, ~end,
