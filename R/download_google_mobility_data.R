@@ -4,7 +4,7 @@
 #' default.
 #'
 #' @details Download target is
-#' <"https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv">
+#' <https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv>
 #'
 #' @param filename `character`. File name and path to write out data.
 #' @param overwrite `logical`. Overwrite if `filename` already exists?
@@ -57,7 +57,7 @@ download_google_mobility_data <- function(
   )
 
   if(aus_only){
-    raw_mobility_data |>
+    raw_mobility_data <- raw_mobility_data |>
       dplyr::filter(
         country_region == "Australia" & is.na(sub_region_2)
       )

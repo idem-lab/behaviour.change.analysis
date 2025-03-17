@@ -31,7 +31,7 @@ default.
 }
 \details{
 Download target is
-<"https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv">
+\url{https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv}
 }
 \examples{
 
