@@ -131,17 +131,16 @@ school_holiday_dates <- function() {
     dplyr::mutate(
       start = lubridate::date(start),
       end = lubridate::date(end)
-    ) %>%
-    # loop through, expanding out into dates within term time
-    dplyr::mutate(id = row_number()) %>%
-    dplyr::group_by(id) %>%
-    do(
-      tibble::tibble(
-        state = .$state,
-        school_holiday = .$school_holiday,
-        date = seq(from = .$start, to =.$end, by = 1)
+    ) |>
+    dplyr:::group_by(
+      state,
+      school_holiday
+    ) |>
+    dplyr::reframe(
+      date = seq(
+        from = start,
+        to = end,
+        by = 1
       )
-    ) %>%
-    dplyr::ungroup() %>%
-    dplyr::select(-id)
+    )
 }
