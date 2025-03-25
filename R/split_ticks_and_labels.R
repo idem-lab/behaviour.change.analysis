@@ -68,7 +68,7 @@ split_ticks_and_labels <- function(
     format(label_format) %>%
     as.character
 
-  label_shift <- ifelse(label_last, 1, 0)
+  label_shift <- ifelse(label_shift, 1, 0)
 
   labs[!(labs %in% labs_short) - label_shift] <- ""
 
